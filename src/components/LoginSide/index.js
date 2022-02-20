@@ -1,10 +1,14 @@
 import React from "react";
 import * as Styles from "./style"
 
+//Components
+import Checkbox from '../../components/Checkbox'
+
 //ícones
 import iconArrow from "../../Assets/arrow.png"
 import iconEmail from "../../Assets/email.png"
 import iconPassword from "../../Assets/password.png"
+
 
 function LoginSide(){
     return(
@@ -34,8 +38,8 @@ function LoginSide(){
 
                     <Styles.RememberPasswordContent>
                         <label for="remember"> 
-                            <input id="remember" type="checkbox"/>
-                            <span>Lembre-me</span>
+                            <Checkbox/>
+                            
                         </label>
                         
                         <span>Esqueci minha senha</span>
