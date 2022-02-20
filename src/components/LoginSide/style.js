@@ -11,8 +11,8 @@ export const Content = styled.div`
 export const LoginContent = styled.div`
     background: #23221e;
     color: #fff;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 560px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +45,7 @@ export const AlignBox = styled.div`
 export const TitleContent = styled.div`
     color: #7f8285;
     margin-bottom: 30px;
+
     
     div{
         display: flex;
@@ -74,6 +75,10 @@ export const EmailContent = styled.div`
     flex-direction: column;
     margin-bottom: 10px;
     color: #7f8285;
+    
+    span{
+        font-weight: bold;
+    }
 
     input{
         color: #fff;
@@ -100,6 +105,10 @@ export const PasswordContent = styled.div`
     margin-bottom: 10px;
     color: #7f8285;
 
+    span{
+        font-weight: bold;
+    }
+    
     input{
         color: #fff;
         margin-top: 5px;
