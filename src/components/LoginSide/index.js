@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import * as Styles from "./style"
 
 //Components
@@ -8,9 +8,17 @@ import Checkbox from '../../components/Checkbox'
 import iconArrow from "../../Assets/arrow.png"
 import iconEmail from "../../Assets/email.png"
 import iconPassword from "../../Assets/password.png"
+import iconEye from '../../Assets/eye.png'
 
 
 function LoginSide(){
+
+    const [showPassword, setShowPassword] = useState(false)
+
+    function SetDisplayPassword(){
+        setShowPassword(showPassword ? false : true)
+    }
+
     return(
         <Styles.Content>
             <Styles.LoginContent>
@@ -32,14 +40,17 @@ function LoginSide(){
 
                     <Styles.PasswordContent>
                         <span>Senha</span>
-                        <input type="password" placeholder="Digite sua senha"/>
+                        <input type={showPassword ? 'text' : 'password'} placeholder="Digite sua senha"/>
                         <img src={iconPassword}/>
+
+                        <button onClick={SetDisplayPassword} id="iconEyeButton">
+                            <img id="iconEyeImg" src={iconEye}/>
+                        </button>
                     </Styles.PasswordContent>
 
                     <Styles.RememberPasswordContent>
                         <label for="remember"> 
-                            <Checkbox/>
-                            
+                            <Checkbox>Lembre-me</Checkbox>
                         </label>
                         
                         <span>Esqueci minha senha</span>

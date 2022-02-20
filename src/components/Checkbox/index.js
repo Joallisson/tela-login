@@ -4,7 +4,7 @@ import * as Styles from './style'
 //Ícone
 import iconCheckbox from '../../Assets/checkbox-checked.png'
 
-function Checkbox() {
+function Checkbox({children, setCheckbox}) {
 
    const [checked, setChecked] = useState(false);
    
@@ -21,7 +21,7 @@ function Checkbox() {
             <img src={iconCheckbox}/>
          </Styles.StyledCheckbox>
          
-         <Styles.Text checked={checked}> Lembre-me </Styles.Text>
+         <Styles.Text checked={checked}>{children}</Styles.Text>
 
       </Styles.CheckboxContainer>
    );

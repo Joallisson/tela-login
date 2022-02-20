@@ -117,6 +117,29 @@ export const PasswordContent = styled.div`
         bottom: 35px;
         left: 10px;
     }
+
+    #iconEyeButton{
+        width: 25px;
+        height: 18px;
+        position: relative;
+        left: 88%;
+        bottom: 52px;
+        background: none;
+        border: none;
+
+        #iconEyeImg{
+            width: 25px;
+            height: 18px;
+            position: relative;
+            top: -1px;
+            left: -50%;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
 `
 
 export const RememberPasswordContent = styled.div`
