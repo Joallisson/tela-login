@@ -2,7 +2,9 @@ import React from "react";
 import * as Styles from "./style"
 
 //ícones
-import arrow from "../../Assets/arrow.png"
+import iconArrow from "../../Assets/arrow.png"
+import iconEmail from "../../Assets/email.png"
+import iconPassword from "../../Assets/password.png"
 
 function LoginSide(){
     return(
@@ -12,7 +14,7 @@ function LoginSide(){
 
                     <Styles.TitleContent>
                         <div>
-                            <img src={arrow}/>
+                            <img src={iconArrow}/>
                             <h2>Faça seu Login</h2>
                         </div>
                         <p>Entre com suas informações de cadastro</p>
@@ -20,23 +22,31 @@ function LoginSide(){
                     
                     <Styles.EmailContent>
                         <span>E-mail</span>
-                        <input type="email"/>
+                        <input type="email" placeholder="Digite seu e-mail"/>
+                        <img src={iconEmail}/>
                     </Styles.EmailContent>
 
                     <Styles.PasswordContent>
                         <span>Senha</span>
-                        <input type="password"/>
+                        <input type="password" placeholder="Digite sua senha"/>
+                        <img src={iconPassword}/>
                     </Styles.PasswordContent>
 
                     <Styles.RememberPasswordContent>
-                        <div>
-                            <input type="checkbox"/> <p>Lembre-me</p>
-                        </div>
+                        <label for="remember"> 
+                            <input id="remember" type="checkbox"/>
+                            <span>Lembre-me</span>
+                        </label>
+                        
                         <span>Esqueci minha senha</span>
                     </Styles.RememberPasswordContent>
 
-                    <button>Entrar</button>
-                    <span>Não tem uma conta? <p>Registre-se</p></span>
+                    <button id="entrarButton">ENTRAR</button>
+
+                    <Styles.RegisterContent>
+                        <span id="noAccount">Não tem uma conta?</span>
+                        <span id="registrer">Registre-se</span>
+                    </Styles.RegisterContent>
                     
                 </Styles.AlignBox>
             </Styles.LoginContent>
